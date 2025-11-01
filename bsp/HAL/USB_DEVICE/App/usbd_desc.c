@@ -76,11 +76,11 @@
 #endif
 
 // Write the custom definition here to prevent the HAL library from overwriting on regeneration
-#define USBD_VID     0xA11C
+#define USBD_VID     0x0D00
 #define USBD_LANGID_STRING     1033
-#define USBD_MANUFACTURER_STRING     "Alliance RoboMaster Team."
+#define USBD_MANUFACTURER_STRING     "JinGang RoboMaster Team."
 #define USBD_PID_FS     0
-#define USBD_PRODUCT_STRING_FS     "RMCS Slave v" APP_VERSION
+#define USBD_PRODUCT_STRING_FS     "ATRM Slave" //APP_VERSION
 #define USBD_CONFIGURATION_STRING_FS     "CDC Config"
 #define USBD_INTERFACE_STRING_FS     "CDC Interface"
 
