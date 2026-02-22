@@ -1,4 +1,5 @@
 #include "app/timer/delay.hpp"
+#include "app/buzzer/buzzer.hpp"
 #include "app/led/led.hpp"
 
 #include <stm32f4xx_hal.h>
@@ -15,6 +16,7 @@ void HAL_IncTick() {
     uint32_t tick = uwTick + 1;
     uwTick        = tick;
     led::led->update(tick);
+    buzzer::buzzer->update(tick);
 }
 
 } // extern "C"

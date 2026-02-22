@@ -2,6 +2,7 @@
 
 #include <main.h>
 
+#include "app/buzzer/buzzer.hpp"
 #include "app/can/can.hpp"
 #include "app/spi/bmi088/accel.hpp"
 #include "app/spi/bmi088/gyro.hpp"
@@ -14,6 +15,7 @@ void AppEntry() { app.init().main(); }
 
 App::App() {
     led::led.init();
+    buzzer::buzzer.init();
     usb::cdc.init();
     can::can1.init();
     can::can2.init();

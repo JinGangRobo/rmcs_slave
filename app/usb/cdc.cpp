@@ -1,5 +1,6 @@
 #include "cdc.hpp"
 
+#include "app/buzzer/buzzer.hpp"
 #include "app/can/can.hpp"
 #include "app/uart/uart.hpp"
 #include "app/usb/field.hpp"
@@ -44,6 +45,8 @@ inline int8_t hal_cdc_receive_callback(uint8_t* buffer, uint32_t* length) {
             uart::uart2->read_buffer_write_device(iterator);
         } else if (field_id == field::DownlinkId::UART3_) {
             uart::uart_dbus->read_buffer_write_device(iterator);
+        } else if (field_id == field::DownlinkId::BUZZER_) {
+            buzzer::buzzer->read_buffer_write_device(iterator);
         } else
             break;
     }
