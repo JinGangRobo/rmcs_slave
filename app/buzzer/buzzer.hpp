@@ -33,7 +33,7 @@ public:
     }
 
     void play(uint8_t note_id) {
-        uint32_t note_index[4]   = {1, 200, 400, 600};
+        uint32_t note_index[4]   = {1, 523, 587, 783};
         uint32_t volume_index[4] = {0, 1, 1, 1};
 
         htim4.Instance->ARR  = (5 * 100000 / note_index[note_id] - 1) * 1u;
